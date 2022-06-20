@@ -1,21 +1,4 @@
-/*CREATE SCHEMA volvocars_congestion_tax
-go
-
-CREATE TABLE city(
-    id INT PRIMARY KEY IDENTITY,
-    name VARCHAR(200) NOT NULL);
-
-CREATE TABLE congestion_tax(
-                                       id INT PRIMARY KEY IDENTITY,
-                                       city_id INT NOT NULL,
-                                       description VARCHAR(200),
-                                       created_at DATETIME2 NOT NULL,
-                                       time_range VARCHAR (11),
-                                       float amount
-);*/
-
-insert into city (id, name)
-values (1, 'Gothenburg');
+insert into city (id, name) values (1, 'Gothenburg');
 
 insert into Vehicle(id, Is_Tax_Exempt, Vehicle_Type)
 values (1, false, 'CAR');
@@ -54,22 +37,6 @@ insert into Congestion_Tax(id, start_time, end_time, amount, city_id)
 values (9, '18:00', '18:29', 8, 1);
 insert into Congestion_Tax(id, start_time, end_time, amount, city_id)
 values (10, '18:30', '05:59', 0, 1);
-
-/* holiday containt 1 day before*/
-insert into Entity_Attribute(id, name, value)
-values (1, 'Weekend', 3, true);
-insert into Entity_Attribute(id, name, value)
-values (2, 'Holiday', 4, true);
-insert into Entity_Attribute(id, name, value)
-values (4, 'Month', 30, true);
-
-insert into Tax_Free_Times(id, description)
-values (1, 'weekend');
-insert into Tax_Free_Times(id, description)
-values (1, 'weekend');
-
-insert into Tax_Free_Times_Attributes(tax_free_tımes_id, attributes_id)
-values (1, 1);
 
 
 
